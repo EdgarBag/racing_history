@@ -5,7 +5,7 @@ import { ParamListBase } from "@react-navigation/native";
 import SeasonsPage from "../pages/SeasonsPage";
 import SeasonDetailsPage from "../pages/SeasonDetailPage";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,8 +34,29 @@ export default function AppNavigator() {
 
     return (
         <Tab.Navigator screenOptions={{ headerShown: false }}>
-            <Tab.Screen name="Drivers" component={DriversStackNav} />
-            <Tab.Screen name="Seasons" component={SeasonsStackNav} />
+            <Tab.Screen name="Drivers" component={DriversStackNav} options={{
+                title: 'Drivers',
+                tabBarIcon: ({ color, size, focused }) => (
+                    <Icon
+                        name="drivers-license"
+                        size={size}
+                        color={color}
+                        style={{ opacity: focused ? 1 : 0.4 }}
+                    />
+                ),
+            }} />
+            <Tab.Screen name="Seasons" component={SeasonsStackNav}
+                options={{
+                    title: 'Seasons',
+                    tabBarIcon: ({ color, size, focused }) => (
+                        <Icon
+                            name="road"
+                            size={size}
+                            color={color}
+                            style={{ opacity: focused ? 1 : 0.4 }}
+                        />
+                    ),
+                }} />
         </Tab.Navigator>
 
     );
