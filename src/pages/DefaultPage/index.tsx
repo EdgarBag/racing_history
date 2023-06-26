@@ -1,5 +1,4 @@
 import { ActivityIndicator, SafeAreaView, ScrollView, StatusBar, View, ViewStyle, useColorScheme } from "react-native";
-import { styles } from "./style";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { useAppSelector } from "../../redux/hooks";
 
@@ -21,7 +20,7 @@ export const DefaultPage: React.FC<DefaultPageProps> = ({ children, style }) => 
                 backgroundColor={'black'}
             />
             <ScrollView
-                 >
+            >
                 {isLoading && <ActivityIndicator size="large" color="#008080" />}
                 {children}
             </ScrollView>

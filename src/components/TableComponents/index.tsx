@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { TouchableOpacity, View } from "react-native";
+import React from 'react';
 import { Table, Row, } from 'react-native-table-component';
 import { styles } from "./styles";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { RowsComponent } from "./components";
-import { setDriversPageAction, setSelectedDriverId } from '../../redux/features/drivers-slice';
-import { PrevNextButtons } from '../PrevNextPageC';
-import { TextBox } from '../../ui/components';
-
 
 interface Props {
     // navigation: any;

@@ -1,5 +1,4 @@
 import { TouchableOpacity, View } from "react-native";
-import { PrevNextButtons } from "../PrevNextPageC";
 import TableComponent from "../TableComponents";
 import { styles } from "../TableComponents/styles";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";

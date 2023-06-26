@@ -1,4 +1,4 @@
-import { Alert, Text, View } from "react-native";
+import { Alert, View } from "react-native";
 import { DefaultPage } from "../DefaultPage";
 import { useEffect } from "react";
 import { getDriversAPI } from "../../api/apiDrivers";

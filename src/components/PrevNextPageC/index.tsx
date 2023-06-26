@@ -1,7 +1,7 @@
 import { TouchableOpacity, View } from "react-native";
 import { TextBox } from "../../ui/components";
 import Icon from 'react-native-vector-icons/Foundation';
-//Foundation
+
 
 interface PrevNextPageProps {
     page: number,

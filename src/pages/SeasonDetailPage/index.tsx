@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSeasonInfo } from "../../hooks/useSeasonInfo";
-import { ErrorMessage, TextBox } from "../../ui/components";
+import { ErrorMessage, } from "../../ui/components";
 import { DefaultPage } from "../DefaultPage";
 import TableComponent from "../../components/TableComponents";
-import { Dimensions, View } from "react-native";
 
 
 const SeasonDetailsPage = () => {

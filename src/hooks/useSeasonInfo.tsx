@@ -21,7 +21,6 @@ export const useSeasonInfo = () => {
                 setSeasonInfo(data)
 
             ).catch(err => {
-                console.log("🚀 ~ file: useSeasonInfo.tsx:24 ~ getDriverData ~ err:", err);
                 Alert.alert('Loading Race info', 'Error.');
                 setErr(true);
             });

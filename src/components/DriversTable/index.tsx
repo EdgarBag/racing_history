@@ -5,7 +5,6 @@ import { setDriversPageAction, setSelectedDriverId } from '../../redux/features/
 import { PrevNextButtons } from '../PrevNextPageC';
 import { TextBox } from '../../ui/components';
 import { styles } from '../TableComponents/styles';
-import { RowsComponent } from '../TableComponents/components';
 import TableComponent from '../TableComponents';
 
 
@@ -21,7 +20,7 @@ const DriversTable: React.FC<Props> = ({ navigation }) => {
     const dispatch = useAppDispatch();
 
     const goToDriverPage = (driverId: string) => {
-        console.log("🚀 ~ file: index.tsx:24 ~ goToDriverPage ~ driverId:", driverId)
+        console.log("🚀 ~ file: index.tsx:24 ~ goToDriverPage ~ driverId:", driverId);
         navigation.navigate('DriverDetails');
         dispatch(setSelectedDriverId(driverId));
     };

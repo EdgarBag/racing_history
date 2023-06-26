@@ -3,13 +3,13 @@ import { TextBox } from "../../ui/components";
 import { styles } from "./style";
 import WebView from "react-native-webview";
 import { useDriverInfo } from "../../hooks/useDriverInfo";
+import React from "react";
 
 
 
 
 export const DriverCard = () => {
     const { driverInfo } = useDriverInfo();
-    console.log("🚀 ~ file: index.tsx:12 ~ DriverCard ~ driverInfo:", driverInfo);
     if (!driverInfo) return <></>;
     return (
         <>

@@ -1,4 +1,4 @@
-import { Alert, Dimensions, View } from "react-native";
+import { View } from "react-native";
 import { PrevNextButtons } from "../../components/PrevNextPageC";
 import { setInitialSeasonsPage, setSeasonsAction } from "../../redux/features/seasons-slice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
@@ -21,8 +21,6 @@ const SeasonsPage: React.FC<Props> = ({ navigation }) => {
     const changePage = (num: number) => {
         dispatch(setInitialSeasonsPage(num));
     };
-
-
 
     useEffect(() => {
         const getDrivers = async () => {
