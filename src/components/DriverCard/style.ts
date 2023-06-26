@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     },
     label: {
         flex: 1,
-        fontSize: 18,
+        fontSize: Dimensions.get('screen').width * 0.041,
         fontWeight: 'bold',
         marginRight: 8,
     },

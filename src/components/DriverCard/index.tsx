@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { TextBox } from "../../ui/components";
 import { styles } from "./style";
 import WebView from "react-native-webview";
@@ -9,6 +9,8 @@ import { useDriverInfo } from "../../hooks/useDriverInfo";
 
 export const DriverCard = () => {
     const { driverInfo } = useDriverInfo();
+    console.log("🚀 ~ file: index.tsx:12 ~ DriverCard ~ driverInfo:", driverInfo);
+    if (!driverInfo) return <></>;
     return (
         <>
             <View style={styles.card}>
@@ -30,7 +32,9 @@ export const DriverCard = () => {
                     <TextBox style={styles.text}>{driverInfo && driverInfo[0].$.url}</TextBox>
                 </View>
             </View>
-            <WebView source={{ uri: driverInfo && driverInfo[0].$.url }} style={{ flex: 1, height: 500 }} />
+            <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+                <WebView source={{ uri: driverInfo && driverInfo[0].$.url }} style={{ flex: 1, height: 1000 }} />
+            </ScrollView>
 
         </>
     );

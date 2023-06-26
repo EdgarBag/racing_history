@@ -21,8 +21,7 @@ export const DefaultPage: React.FC<DefaultPageProps> = ({ children, style }) => 
                 backgroundColor={'black'}
             />
             <ScrollView
-                contentInsetAdjustmentBehavior="automatic"
-                style={backgroundStyle}>
+                 >
                 {isLoading && <ActivityIndicator size="large" color="#008080" />}
                 {children}
             </ScrollView>

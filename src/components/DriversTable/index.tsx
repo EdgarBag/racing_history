@@ -21,6 +21,7 @@ const DriversTable: React.FC<Props> = ({ navigation }) => {
     const dispatch = useAppDispatch();
 
     const goToDriverPage = (driverId: string) => {
+        console.log("🚀 ~ file: index.tsx:24 ~ goToDriverPage ~ driverId:", driverId)
         navigation.navigate('DriverDetails');
         dispatch(setSelectedDriverId(driverId));
     };
@@ -49,8 +50,8 @@ const DriversTable: React.FC<Props> = ({ navigation }) => {
                 rowsData={rowsData}
                 arrOfData={currentDrivers}
                 rowData={['#', 'Driver name', 'Nationality', 'DOB']}
-                rowsFlexArr={[1.7, 1, 1.5]}
-                flexArr={[1, 1.7, 1, 1.5]}
+                rowsFlexArr={[1.7, 1, 1, 1.5]}
+                flexArr={[0.5, 1.7, 1, 1]}
                 displayRowNumber={true}
             />
         </View>

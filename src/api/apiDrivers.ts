@@ -29,12 +29,12 @@ export const getDriverDataAPI = async (driverId: string, dispatch: AppDispatch):
             dispatch(setLoading(true));
             let res = await axios.get(`${API_URL}/api/f1/drivers/${driverId}`);
             parseString(res.data, (err: any, result: any) => {
+
                 resolve(result.MRData.DriverTable[0].Driver);
 
             });
 
         } catch (error) {
-
             reject(false);
         } finally {
             dispatch(setLoading(false));
